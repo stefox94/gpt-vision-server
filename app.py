@@ -17,7 +17,7 @@ def generate_description():
         return jsonify({"error": "Missing image_url"}), 400
     try:
         response = openai.chat.completions.create(
-            model="gpt-4-vision-preview",
+            model="gpt-4o",  # ✅ Neue Modellbezeichnung
             messages=[
                 {"role": "user", "content": [
                     {"type": "text", "text": "Describe the fashion item in this image for a Vinted listing. Be clear, friendly, and realistic."},
